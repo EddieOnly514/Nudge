@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Nudge",
+    "slug": "nudge-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B9D"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nudge.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Nudge uses your location to show you people nearby and suggest smart matches in your area.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Nudge uses your location to show you people nearby. Your precise location is only used when you activate Nudge Mode.",
+        "NSCameraUsageDescription": "Nudge needs access to your camera to take photos for your profile.",
+        "NSPhotoLibraryUsageDescription": "Nudge needs access to your photo library to select photos for your profile."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B9D"
+      },
+      "package": "com.nudge.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Nudge uses your location to show you people nearby. Your precise location is only used when you activate Nudge Mode."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Nudge needs access to your photos to update your profile."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
+  }
+}
